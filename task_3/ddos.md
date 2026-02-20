@@ -16,6 +16,8 @@ Anomaly Identification: Any interval where the actual request count deviates fro
 3. Implementation Details
 The analysis was performed using Python with the pandas and scikit-learn libraries. Below are the key fragments of the source code:
 
+To reproduce this analysis, ensure you have pandas, scikit-learn, and matplotlib installed. Run the provided ddos_regression.py script while the server.log file is in the same directory
+
 ```python
 # Initializing the Linear Regression model
 model = LinearRegression()
