@@ -2,7 +2,7 @@ Web Server Log File Analysis for DDoS Detection
 1. Project Overview
 This project involves the analysis of a web server log file to identify Distributed Denial of Service (DDoS) attack intervals. While basic monitoring often relies on static thresholds, this analysis utilizes Linear Regression to establish a baseline of normal traffic patterns and scientifically identify anomalies that indicate a malicious attack.
 
-Log File Resource: server.log
+Log File Resource: (./server.log)
 
 2. Methodology: Regression Analysis
 To identify the attack, we treat the number of requests as a dependent variable of time. The steps performed are:
