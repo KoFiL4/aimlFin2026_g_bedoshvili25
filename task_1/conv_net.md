@@ -12,6 +12,7 @@ The architecture is biologically inspired by the human visual cortex, where spec
 3. **Fully Connected (Dense) Layer:** After feature extraction, the data is flattened into a 1D vector and passed through dense layers to predict the final class probabilities.
 
 
+
 ---
 
 ## 2. Practical Cybersecurity Application: Malware Visualization
@@ -29,8 +30,7 @@ Below is a practical implementation of this concept using Python and TensorFlow/
 ### Step 3.1: Data Generation
 Since we cannot process real malware binaries directly in this environment, we generate synthetic data. We create 200 samples of 64x64 pixel grayscale images, assigning them randomly to two classes: 0 (Benign) and 1 (Malware).
 
-
-Python
+```python
 import numpy as np
 import tensorflow as tf
 from tensorflow.keras import layers, models
@@ -83,6 +83,10 @@ history = model.fit(X_train, y_train, epochs=10, validation_data=(X_test, y_test
 Execution Log (Terminal Screenshot):
 (The image below demonstrates the TensorFlow training process).
 
+
+
+
+
 ![Step 1: Website Interface](terminal_output.png)
 
 Step 3.4: Visualizing the Results
@@ -102,6 +106,6 @@ plt.show()
 Accuracy Graph:
 (The graph below illustrates the model's performance).
 
-![Step 1: Website Interface](plot_output.png)
+------------------------aqaqaq---------------------
 
 Report executed and prepared for the Final Exam.
