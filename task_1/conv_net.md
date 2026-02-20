@@ -81,7 +81,7 @@ print("Training the CNN model on the dataset...")
 history = model.fit(X_train, y_train, epochs=10, validation_data=(X_test, y_test))
 Execution Log (Terminal Screenshot): '''
 (The image below demonstrates the TensorFlow training process).
-
+```
 ![Step 1: Website Interface](terminal_output.png)
 
 Step 3.4: Visualizing the Results
