@@ -20,7 +20,7 @@ Anomaly Detection: In network traffic, Transformers can learn the "normal" seque
 Step-by-Step Implementation and Visualization
 Below is the Python implementation used to visualize how Positional Encoding provides the necessary structural context to the model.
 
-Python
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -43,15 +43,15 @@ plt.colorbar(label='Encoding Value')
 plt.title("Transformer: Positional Encoding Matrix Visualization")
 plt.show()
 Execution Results:
-
+```
 1. Code Execution Log:
 The script was executed successfully to demonstrate the mathematical foundation of the Transformer's spatial awareness.
 
-------------------------aqaqaq---------------------
+![Step 1: Website Interface](terminal_2.png)
 
 2. Positional Encoding Visualization:
 The resulting matrix below shows the unique patterns assigned to each position. This ensures the model understands the sequence of the data it processes.
 
-------------------------aqaqaq---------------------
+![Step 1: Website Interface](plot_2.png)
 
 End of Report - AI & ML for Cybersecurity Final Exam
