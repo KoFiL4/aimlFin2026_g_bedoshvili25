@@ -83,7 +83,7 @@ history = model.fit(X_train, y_train, epochs=10, validation_data=(X_test, y_test
 Execution Log (Terminal Screenshot):
 (The image below demonstrates the TensorFlow training process).
 
-------------------------aqaqaq---------------------
+![Step 1: Website Interface](terminal_output.png)
 
 Step 3.4: Visualizing the Results
 Finally, we use matplotlib to plot the learning curve of our model, comparing training accuracy against validation accuracy.
@@ -102,6 +102,6 @@ plt.show()
 Accuracy Graph:
 (The graph below illustrates the model's performance).
 
-------------------------aqaqaq---------------------
+![Step 1: Website Interface](plot_output.png)
 
 Report executed and prepared for the Final Exam.
