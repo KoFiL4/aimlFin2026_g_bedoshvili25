@@ -16,7 +16,7 @@ Anomaly Identification: Any interval where the actual request count deviates fro
 3. Implementation Details
 The analysis was performed using Python with the pandas and scikit-learn libraries. Below are the key fragments of the source code:
 
-Python
+```python
 # Initializing the Linear Regression model
 model = LinearRegression()
 
@@ -29,7 +29,7 @@ df['is_ddos'] = df['requests'] > (df['predicted'] * 2)
 4. Results and Visualizations
 Attack Detection Log (Terminal)
 The script successfully parsed the logs and identified a specific spike in traffic. The following terminal output confirms the exact minutes of the incident:
-
+```
 ![Step 1: Website Interface](terminal_3.png)
 
 Regression Analysis Plot
