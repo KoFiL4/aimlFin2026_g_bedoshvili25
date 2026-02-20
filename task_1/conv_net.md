@@ -29,7 +29,7 @@ Below is a practical implementation of this concept using Python and TensorFlow/
 ### Step 3.1: Data Generation
 Since we cannot process real malware binaries directly in this environment, we generate synthetic data. We create 200 samples of 64x64 pixel grayscale images, assigning them randomly to two classes: 0 (Benign) and 1 (Malware).
 
-```python
+
 import numpy as np
 import tensorflow as tf
 from tensorflow.keras import layers, models
