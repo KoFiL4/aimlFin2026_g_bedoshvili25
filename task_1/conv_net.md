@@ -87,7 +87,7 @@ Execution Log (Terminal Screenshot): '''
 Step 3.4: Visualizing the Results
 Finally, we use matplotlib to plot the learning curve of our model, comparing training accuracy against validation accuracy.
 
-Python
+```python
 # Performance Visualization
 plt.figure(figsize=(8, 5))
 plt.plot(history.history['accuracy'], label='Training Accuracy', marker='o')
@@ -100,7 +100,8 @@ plt.grid(True)
 plt.show()
 Accuracy Graph:
 (The graph below illustrates the model's performance).
+```
 
-------------------------aqaqaq---------------------
+![Step 1: Website Interface](plot_output.png)
 
 Report executed and prepared for the Final Exam.
