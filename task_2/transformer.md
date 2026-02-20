@@ -19,7 +19,7 @@ Since Transformers process all inputs at the same time, they do not inherently u
 Python Implementation for Positional Encoding:
 Below is the script used to generate and visualize the positional encoding matrix using sine and cosine functions.
 
-Python
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -40,6 +40,7 @@ plt.show()
 Execution Results:
 Terminal Success Confirmation:
 The following screenshot confirms that the positional encoding logic was executed correctly within the development environment.
+```
 
 ![Step 1: Website Interface](terminal_2.png)
 
