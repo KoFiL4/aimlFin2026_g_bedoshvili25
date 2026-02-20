@@ -12,6 +12,7 @@ The architecture is biologically inspired by the human visual cortex, where spec
 3. **Fully Connected (Dense) Layer:** After feature extraction, the data is flattened into a 1D vector and passed through dense layers to predict the final class probabilities.
 
 
+![Step 1: Website Interface](plot_output.png)
 
 ---
 
