@@ -1,26 +1,25 @@
-Task 2: Transformer Network for Cybersecurity
-Introduction to Transformer Architecture
-The Transformer network, introduced in 2017, represents a paradigm shift in Artificial Intelligence. Unlike traditional Sequence-to-Sequence models such as Recurrent Neural Networks (RNNs) and Long Short-Term Memory (LSTM) networks, Transformers do not process data in a linear, step-by-step fashion. Instead, they utilize a mechanism known as "Parallelization," allowing the model to analyze an entire sequence of data simultaneously. This architectural innovation significantly reduces training time and allows the model to capture long-range dependencies in data, which was a major limitation of previous technologies.
+Transformers in Natural Language Processing (NLP)
+1. Introduction to Transformer Architecture
+The Transformer model, introduced in the landmark paper "Attention Is All You Need" (2017), represents a fundamental shift in how artificial intelligence processes information. Before Transformers, sequence-to-sequence tasks relied on Recurrent Neural Networks (RNNs) or LSTMs, which processed data linearly (one step at a time). This linear approach was slow and often lost track of information in long sequences.
 
-The Self-Attention Mechanism
-The core innovation of the Transformer is the Self-Attention (or Multi-Head Attention) layer. This mechanism allows the model to weigh the importance of different parts of the input data dynamically. In the context of Natural Language Processing (NLP), when the model processes a specific word, self-attention enables it to "look" at other words in the sentence to gain contextual understanding. It calculates Query (Q), Key (K), and Value (V) vectors for each input to determine these relationships.
+Transformers introduced Parallelization, allowing the model to analyze an entire dataset simultaneously. This makes them exceptionally powerful for cybersecurity applications, where massive amounts of network traffic or system logs must be analyzed in real-time to identify complex patterns of attack.
 
-Positional Encoding
-Because Transformers process all input tokens at once, they lack an inherent understanding of the sequence or order of those tokens. In any language or data stream, the order of elements is vital for meaning. To address this, "Positional Encoding" is used. This technique injects information about the relative or absolute position of the tokens in the sequence by adding a specific mathematical vector (using sine and cosine functions) to the input embeddings.
+-------------------------------aq architecture.png-------------------
 
-Applications in Cybersecurity
-Transformers have found profound applications in the field of cybersecurity:
+2. The Core Mechanism: Self-Attention
+The most critical innovation of the Transformer is the Self-Attention mechanism. This allows the model to determine the relative importance of different words or data points in a sequence, regardless of their distance from each other.
 
-Log Analysis: Transformers can process massive amounts of system logs to detect subtle patterns that indicate a breach or unauthorized lateral movement within a network.
+In a cybersecurity context, Self-Attention can be used to correlate different events in a system log. For example, it can "attend" to a login event from an unusual IP and correlate it with a later file-deletion command, identifying a potential breach that traditional systems might miss. By calculating Query (Q), Key (K), and Value (V) vectors, the model assigns weights to every element to understand the full context.
 
-Malware Detection: By treating the assembly code or binary sequences of a file as a "language," Transformers can identify malicious intent based on the structural context of the code.
+-------------------------------aq attention_scheme.png-------------------
 
-Anomaly Detection: In network traffic, Transformers can learn the "normal" sequence of packets and flag any deviation that might suggest an exfiltration attempt or a DDoS attack.
+3. Positional Encoding
+Since Transformers process all inputs at the same time, they do not inherently understand the order of data. In cybersecurity, the timing and order of events are vital. To solve this, Positional Encoding is used to add a unique mathematical signal to each token, providing the model with information about its specific location in the sequence.
 
-Step-by-Step Implementation and Visualization
-Below is the Python implementation used to visualize how Positional Encoding provides the necessary structural context to the model.
+Python Implementation for Positional Encoding:
+Below is the script used to generate and visualize the positional encoding matrix using sine and cosine functions.
 
-```python
+Python
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -32,26 +31,34 @@ def get_positional_encoding(seq_len, d_model):
             pos_enc[pos, i + 1] = np.cos(pos / (10000 ** (i / d_model)))
     return pos_enc
 
-# Parameters: 50 tokens, 128-dimensional embedding
+# Logic execution
 encoding = get_positional_encoding(50, 128)
-
 plt.figure(figsize=(10, 8))
 plt.pcolormesh(encoding, cmap='viridis')
-plt.xlabel('Embedding Dimension')
-plt.ylabel('Token Position')
-plt.colorbar(label='Encoding Value')
-plt.title("Transformer: Positional Encoding Matrix Visualization")
+plt.title("Transformer: Positional Encoding Matrix")
 plt.show()
 Execution Results:
-```
-1. Code Execution Log:
-The script was executed successfully to demonstrate the mathematical foundation of the Transformer's spatial awareness.
+Terminal Success Confirmation:
+The following screenshot confirms that the positional encoding logic was executed correctly within the development environment.
 
-![Step 1: Website Interface](terminal_2.png)
+-------------------------------aq terminal_2.png-------------------
 
-2. Positional Encoding Visualization:
-The resulting matrix below shows the unique patterns assigned to each position. This ensures the model understands the sequence of the data it processes.
+Visualized Encoding Matrix:
+The heatmap below illustrates how each token's position is uniquely identified, ensuring the model maintains structural awareness of the data.
 
-![Step 1: Website Interface](plot_2.png)
+-------------------------------aq plot_2.png-------------------
 
-End of Report - AI & ML for Cybersecurity Final Exam
+4. Cybersecurity Applications
+The versatility of Transformers makes them ideal for modern security infrastructure:
+
+Automated Threat Hunting: Analyzing billions of log entries to find "needles in the haystack."
+
+Vulnerability Detection: Scanning source code for structural patterns that indicate potential security flaws.
+
+Phishing Detection: Understanding the nuanced context of emails to identify sophisticated social engineering attempts.
+
+5. Conclusion
+By utilizing Self-Attention and Positional Encoding, Transformers provide a robust and scalable architecture for understanding complex sequences. Whether it is human language or network packets, this model's ability to process data in parallel while maintaining context makes it an indispensable tool in the fight against modern cyber threats.
+
+Report prepared by: Giorgi Bedoshvili
+Date: February 12, 2026
